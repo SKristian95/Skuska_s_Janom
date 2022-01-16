@@ -1,0 +1,61 @@
+h1{ 
+    text-align: center; 
+    color: #444; 
+    font-family: 'Trebuchet MS';
+    margin: 60px auto; 
+}
+
+.parent {
+    background-color: blue;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.child {
+    background-color: red;
+    width: 50%;
+    height: 50%;
+    /* transition: transform 1s linear 1s;čo | koľko | ako | o koľko začne */
+    /* -webkit-transition: transform 1s linear;
+    -moz-transition: transform 1s linear 1s;
+    -ms-transition: transform 1s linear 1s;
+    -o-transition: transform 1s linear 1s;
+    -webkit-transition: transform 1s linear 1s; */
+}
+
+.parent:hover .child {
+    animation: left-to-right 1s ease-in forwards 3 alternate;
+    -webkit-animation: left-to-right 1s ease-in forwards 3 alternate;
+}
+
+@keyframes left-to-right {
+    0% {
+        transform:translateX(0%);
+        -webkit-transform:translateX(0%);
+        -moz-transform:translateX(0%);
+        -ms-transform:translateX(0%);
+        -o-transform:translateX(0%);
+    }
+    33% {
+        transform:translateY(100%);
+        -webkit-transform:translateY(100%);
+        -moz-transform:translateY(100%);
+        -ms-transform:translateY(100%);
+        -o-transform:translateY(100%);
+    }
+    66% {
+        transform:translateY(100%) translateX(100%);
+        -webkit-transform:translateY(100%) translateX(100%);
+        -moz-transform:translateY(100%) translateX(100%);
+        -ms-transform:translateY(100%) translateX(100%);
+        -o-transform:translateY(100%) translateX(100%);
+}
+    100% {
+        transform:translateX(100%);
+        -webkit-transform:translateX(100%);
+        -moz-transform:translateX(100%);
+        -ms-transform:translateX(100%);
+        -o-transform:translateX(100%);
+    }
+}

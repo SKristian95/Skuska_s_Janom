@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <link rel="stylesheet" href="css/ajax.css">
+</head>
+<body>
+    <p><a href="string.html">String website</a></p>
+
+   <p><a href="oop.html">OOP</a></p>
+
+    <!-- Po stlačení button chcem, aby stránka požiadala o získanie všetkých krajín z API na stránku -->
+    <!-- https://restcountries.com/-->
+    <!-- dobre je stiahnuť si JSONview do priehľadača, aby usporiadal JSON -->
+    <!-- <button onclick=showCountries()>Show countries</button> -->
+
+
+    <button>Click</button>
+
+    <div id="feed"></div>
+
+    
+    <script src="js/ajax.js">
+        // function showCountries(){
+        //    let xhr = new XMLHttpRequest() //<- toto je objekt
+
+        //     //metóda open otvorí objekt XMLHttpRequest() a prechádza ním, metódu open použijeme na iniciatívu požiadavky 
+        //     // do open() odovzdávame 3 požiadavky: 
+        //             //1. o akú ide [GET požiadavka na získanie], ale može to byť aj žiadosť na príspevok, ak posielame údaje, žiadosť o vymazanie atď.
+        //             //2. cesta k údajom
+        //             //3. Je asychnchonna [true] alebo nie je [false]
+        //             xhr.open('GET', 'https://restcountries.com/v3.1/all', true)   //<- 1. inicializovaná požiadavka     
+        
+        //             //3. ďalší koncept je spracovanie odpovede, ktoré je treba spracovať 
+        //             // onload je metódna na spracovanie
+        //             xhr.onload = function()  { // k metóde onload priradime funkciu callback, ktorá sa bude zaoberať stavovými kódmi, ktoré dostávame späť
+        //                 if(xhr.status == 200)   { //stránka so stavovými kódmi, ktoré sa môžu vrátaiť https://httpstatusdogs.com/
+        //                     console.log('sucess')
+        //                     let countries = JSON.parse(this.response)  // odpoveď sa vracia ako objekt
+        //                     console.log(countries)
+        //                     countries.forEach(country => {
+        //                         const countryCard = document.createElement('div')
+        //                         const countryCardImage = document.createElement('img')
+        //                         countryCard.innerHTML = country.name.common
+        //                         countryCardImage.src = country.flags.png
+        //                         countryCard.appendChild(countryCardImage)
+        //                         document.getElementById('feed').appendChild(countryCard)
+        //                     });
+        //                 }                            
+
+        //             }       
+
+
+
+        //             xhr.send()      //<- 2. následne musíme odoslať žiadosť
+        //         }
+
+</script>
+</body>
+</html>
+
+
+
+                

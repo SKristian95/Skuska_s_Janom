@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/string.css">
+</head>
+<body>
+<!-- 
+
+    <p><a href="ajax.html">AJAX</a></p> -->
+
+
+    <!-- <div>
+        <span>Hello</span>
+        <span style="display: none;">World</span>
+    </div> -->
+
+    <!-- <div>
+        <span title="hello" id="hi" class="h1" data-test="this is a test" data-longer-name="Some long name">Hello</span>
+        <span id="bye">Bye</span>
+    </div> -->
+
+    <h1>Vitaj Jano </h1>
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- <div class="grandparent" id="grandparent">
+        <div class="parent">
+            <div class="child" id="child-one"></div>
+            <div class="child"></div>
+        </div>
+        <div class="parent">
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+    </div> -->
+
+    <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // TRAVERZOVANIE DOM
+        // https://www.youtube.com/watch?v=v7rSSy8CaYE&list=RDCMUCFbNIlppjAuEX4znoulh0Cw&index=3
+
+        // z hora na dol
+
+        // 1. getElementById()
+
+            // const grandparent = document.getElementById('grandparent');
+
+            // changeColor(grandparent);
+        
+            // function changeColor(element) {
+            //     element.style.backgroundColor = 'yellow';
+            // }
+
+
+        // 2. getElementByClassName()
+
+            // const grandparent = Array.from(document.getElementsByClassName('grandparent'));
+
+            // grandparent.forEach(changeColor);
+
+            // function changeColor(element){
+            //     element.style.backgroundColor = 'yellow';
+            // }
+
+
+        // 3. querySelector()    iba prvý výskyt sa zmení
+
+            // const parent = document.querySelector('.parent');
+
+            // changeColor(parent);
+
+            // function changeColor(element) {
+            //     element.style.backgroundColor = 'yellow';
+            // }
+
+
+        // 4. querySelectorAll()
+
+            // const parents = document.querySelectorAll('.parent');
+
+            // parents.forEach(changeColor);
+
+            // function changeColor(element){
+            //     element.style.backgroundColor = 'yellow';
+            // }
+
+
+        // 5. a) children - zachytí parents
+        
+            // const grandparent = document.querySelector('.grandparent');
+            // const parents = Array.from(grandparent.children);
+         
+            // parents.forEach(changeColor);
+
+            // function changeColor(element){
+            //     element.style.backgroundColor = 'yellow'
+            // }
+
+       // 5. b) children - zachytí 1. parent 1. child
+
+            // const grandparent = document.querySelector('.grandparent');
+            // const parents = Array.from(grandparent.children);
+            // const parentOne = parents[0];
+            // const children = parentOne.children;
+
+
+            // changeColor(children[0]);
+
+            // function changeColor(element){
+            //     element.style.backgroundColor = 'yellow'
+            // }
+
+
+       // 5. c) children - zachytí 1. parent 1. child
+
+            // const grandparent = document.querySelector('.grandparent');
+            // const childOne = grandparent.querySelector('.child');
+
+            // changeColor(childOne);
+
+            // function changeColor(element){
+            //     element.style.backgroundColor = 'yellow'
+            // }
+
+    
+       // 5. d) children - zachytí všetky deti
+
+            // const grandparent = document.querySelector('.grandparent');
+            // const childOne = grandparent.querySelectorAll('.child');
+
+            // childOne.forEach(changeColor)
+
+            // function changeColor(element){
+            //     element.style.backgroundColor = 'yellow'
+            // }
+
+
+        // z dola na hor
+
+        // 6. a) first child
+
+            // const childOne = document.querySelector('#child-one');
+            
+            // changeColor(childOne)
+
+            // function changeColor(element){
+            //     element.style.backgroundColor = 'yellow'
+            // }
+
+
+        // 6. b) parent
+
+            // const childOne = document.querySelector('#child-one');
+            // const parent = childOne.parentElement;
+            
+            // changeColor(parent)
+
+            // function changeColor(element){
+            //     element.style.backgroundColor = 'yellow'
+            // }
+
+
+        // 6. c) grandparent - po jednom stupni na hor
+
+            // const childOne = document.querySelector('#child-one');
+            // const parent = childOne.parentElement;
+            // const grandparent = parent.parentElement;
+            
+            // changeColor(grandparent)
+
+            // function changeColor(element){
+            //     element.style.backgroundColor = 'yellow'
+            // }
+
+
+        // 6. d) grandparent - napriamo z child na grandparent
+
+            // const childOne = document.querySelector('#child-one');
+            // const grandparent = childOne.closest('.grandparent') // najblizsi rodic, ktory zodpoveda selektoru
+            
+            // changeColor(grandparent)
+
+            // function changeColor(element){
+            //     element.style.backgroundColor = 'yellow'
+            // }
+
+
+
+        // súrodenci 
+
+        // 7. a) nextElementSibling
+
+            // const childOne = document.querySelector('#child-one');
+            // const childTwo = childOne.nextElementSibling;
+
+
+            // changeColor(childTwo)
+
+            // function changeColor(element){
+            //     element.style.backgroundColor = 'yellow'
+            // }
+
+
+        //    7. b) nextElementSibling & previousElementSibling
+
+            // const childOne = document.querySelector('#child-one');
+            // const childTwo = childOne.nextElementSibling;
+
+
+            // changeColor(childTwo.previousElementSibling)
+
+            // function changeColor(element){
+            //     element.style.backgroundColor = 'yellow'
+            // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <script defer src="js/string.js"></script>
+</body>
+</html>
